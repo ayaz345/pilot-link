@@ -11,19 +11,19 @@ def _swig_setattr_nondynamic(self,class_type,name,value,static=1):
             if hasattr(value,"thisown"): self.__dict__["thisown"] = value.thisown
             del value.thisown
             return
-    method = class_type.__swig_setmethods__.get(name,None)
-    if method: return method(self,value)
+    if method := class_type.__swig_setmethods__.get(name, None):
+        return method(self,value)
     if (not static) or hasattr(self,name) or (name == "thisown"):
         self.__dict__[name] = value
     else:
-        raise AttributeError("You cannot add attributes to %s" % self)
+        raise AttributeError(f"You cannot add attributes to {self}")
 
 def _swig_setattr(self,class_type,name,value):
     return _swig_setattr_nondynamic(self,class_type,name,value,0)
 
 def _swig_getattr(self,class_type,name):
-    method = class_type.__swig_getmethods__.get(name,None)
-    if method: return method(self)
+    if method := class_type.__swig_getmethods__.get(name, None):
+        return method(self)
     raise AttributeError,name
 
 import types
@@ -115,7 +115,7 @@ class pi_socket_t(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, pi_socket_t, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C pi_socket_t instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C pi_socket_t instance at {self.this}>"
     __swig_setmethods__["sd"] = _pisock.pi_socket_t_sd_set
     __swig_getmethods__["sd"] = _pisock.pi_socket_t_sd_get
     if _newclass:sd = property(_pisock.pi_socket_t_sd_get, _pisock.pi_socket_t_sd_set)
@@ -210,7 +210,7 @@ class pi_socket_list_t(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, pi_socket_list_t, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C pi_socket_list_t instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C pi_socket_list_t instance at {self.this}>"
     __swig_setmethods__["ps"] = _pisock.pi_socket_list_t_ps_set
     __swig_getmethods__["ps"] = _pisock.pi_socket_list_t_ps_get
     if _newclass:ps = property(_pisock.pi_socket_list_t_ps_get, _pisock.pi_socket_list_t_ps_set)
@@ -303,7 +303,7 @@ class VFSDirInfo(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, VFSDirInfo, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C VFSDirInfo instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C VFSDirInfo instance at {self.this}>"
     __swig_setmethods__["attr"] = _pisock.VFSDirInfo_attr_set
     __swig_getmethods__["attr"] = _pisock.VFSDirInfo_attr_get
     if _newclass:attr = property(_pisock.VFSDirInfo_attr_get, _pisock.VFSDirInfo_attr_set)
@@ -332,7 +332,7 @@ class VFSAnyMountParam(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, VFSAnyMountParam, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C VFSAnyMountParam instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C VFSAnyMountParam instance at {self.this}>"
     __swig_setmethods__["volRefNum"] = _pisock.VFSAnyMountParam_volRefNum_set
     __swig_getmethods__["volRefNum"] = _pisock.VFSAnyMountParam_volRefNum_get
     if _newclass:volRefNum = property(_pisock.VFSAnyMountParam_volRefNum_get, _pisock.VFSAnyMountParam_volRefNum_set)
@@ -364,7 +364,7 @@ class VFSSlotMountParam(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, VFSSlotMountParam, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C VFSSlotMountParam instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C VFSSlotMountParam instance at {self.this}>"
     __swig_setmethods__["vfsMountParam"] = _pisock.VFSSlotMountParam_vfsMountParam_set
     __swig_getmethods__["vfsMountParam"] = _pisock.VFSSlotMountParam_vfsMountParam_get
     if _newclass:vfsMountParam = property(_pisock.VFSSlotMountParam_vfsMountParam_get, _pisock.VFSSlotMountParam_vfsMountParam_set)
@@ -396,7 +396,7 @@ class VFSInfo(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, VFSInfo, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C VFSInfo instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C VFSInfo instance at {self.this}>"
     __swig_setmethods__["attributes"] = _pisock.VFSInfo_attributes_set
     __swig_getmethods__["attributes"] = _pisock.VFSInfo_attributes_get
     if _newclass:attributes = property(_pisock.VFSInfo_attributes_get, _pisock.VFSInfo_attributes_set)
@@ -443,7 +443,7 @@ class PilotUser(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, PilotUser, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C PilotUser instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C PilotUser instance at {self.this}>"
     __swig_setmethods__["passwordLength"] = _pisock.PilotUser_passwordLength_set
     __swig_getmethods__["passwordLength"] = _pisock.PilotUser_passwordLength_get
     if _newclass:passwordLength = property(_pisock.PilotUser_passwordLength_get, _pisock.PilotUser_passwordLength_set)
@@ -490,7 +490,7 @@ class SysInfo(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, SysInfo, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C SysInfo instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C SysInfo instance at {self.this}>"
     __swig_setmethods__["romVersion"] = _pisock.SysInfo_romVersion_set
     __swig_getmethods__["romVersion"] = _pisock.SysInfo_romVersion_get
     if _newclass:romVersion = property(_pisock.SysInfo_romVersion_get, _pisock.SysInfo_romVersion_set)
@@ -540,7 +540,7 @@ class DBInfo(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, DBInfo, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C DBInfo instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C DBInfo instance at {self.this}>"
     __swig_setmethods__["more"] = _pisock.DBInfo_more_set
     __swig_getmethods__["more"] = _pisock.DBInfo_more_get
     if _newclass:more = property(_pisock.DBInfo_more_get, _pisock.DBInfo_more_set)
@@ -599,7 +599,7 @@ class DBSizeInfo(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, DBSizeInfo, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C DBSizeInfo instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C DBSizeInfo instance at {self.this}>"
     __swig_setmethods__["numRecords"] = _pisock.DBSizeInfo_numRecords_set
     __swig_getmethods__["numRecords"] = _pisock.DBSizeInfo_numRecords_get
     if _newclass:numRecords = property(_pisock.DBSizeInfo_numRecords_get, _pisock.DBSizeInfo_numRecords_set)
@@ -640,7 +640,7 @@ class CardInfo(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, CardInfo, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C CardInfo instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C CardInfo instance at {self.this}>"
     __swig_setmethods__["card"] = _pisock.CardInfo_card_set
     __swig_getmethods__["card"] = _pisock.CardInfo_card_get
     if _newclass:card = property(_pisock.CardInfo_card_get, _pisock.CardInfo_card_set)
@@ -690,7 +690,7 @@ class NetSyncInfo(_object):
     __swig_getmethods__ = {}
     __getattr__ = lambda self, name: _swig_getattr(self, NetSyncInfo, name)
     def __repr__(self):
-        return "<%s.%s; proxy of C NetSyncInfo instance at %s>" % (self.__class__.__module__, self.__class__.__name__, self.this,)
+        return f"<{self.__class__.__module__}.{self.__class__.__name__}; proxy of C NetSyncInfo instance at {self.this}>"
     __swig_setmethods__["lanSync"] = _pisock.NetSyncInfo_lanSync_set
     __swig_getmethods__["lanSync"] = _pisock.NetSyncInfo_lanSync_get
     if _newclass:lanSync = property(_pisock.NetSyncInfo_lanSync_get, _pisock.NetSyncInfo_lanSync_set)
